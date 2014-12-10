@@ -1,0 +1,26 @@
+A rpi_nano API for RPi
+===================================
+
+Overview
+--------
+This API allow to control easily the ARM-nano module, for send and
+receive on the sigfox network and local network.
+You can visit web page of ARM-nano for more informations.
+-> http://www.atim.com/product/rf-oem-module/arm-modules/new-rf-module-arm-nano
+
+
+Installation
+------------
+There are not installation. For use this API, just copy or include the
+files rpi_nano.h and rpi_nano.c from rpi_nano/api in you project.
+	
+Documentation
+-------------
+To generate the doc you need to have doxygen installed locally; then run :
+	'make doc'
+The documentation is generated  locally in the doc/html/index.html folder.
+
+Report a Bug
+------------
+To report your problem, you can send a mail to [antoine.maleyrie@gmail.com]
+
