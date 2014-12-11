@@ -217,7 +217,7 @@ int _rpi_nano_exit_AT(int fd)
 		fprintf(stderr, "ERROR - %s: Bad response from ARM-nano.\n", __func__);
 		return -1;
 	}
-	sleep(7);
+	usleep(100000);
 	if (tcflush(fd,TCIFLUSH) == -1){
 		fprintf(stderr, "ERROR - %s: %s\n", __func__, strerror(errno));
 		return -1;
@@ -570,9 +570,13 @@ int rpi_nano_init(	const char* path,
 	}
 	
 	//Booting
-	sleep(3);
-	char buf[_RPI_NANO_SIZE_BUF];
-	_rpi_nano_read(rpi_nano_fd, buf, _RPI_NANO_SIZE_BUF, _RPI_NANO_SIZE_BUF, -1);
+	sleep(4);
+	//char buf[_RPI_NANO_SIZE_BUF];
+	//_rpi_nano_read(rpi_nano_fd, buf, _RPI_NANO_SIZE_BUF, _RPI_NANO_SIZE_BUF, -1);
+	if (tcflush(rpi_nano_fd,TCIFLUSH) == -1){
+		fprintf(stderr, "ERROR - %s: %s\n", __func__, strerror(errno));
+		return -1;
+	}
 	
 	return rpi_nano_fd;
 }
