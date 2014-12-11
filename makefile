@@ -1,25 +1,25 @@
 ########################################################################
 # 
-# Makfile for generate the documentation with doxygen and compilation
+# Makefile to generate the documentation with doxygen and compile
 # the examples
-# for using the api for controlling the arm-nano module.
+# for using the api to control the arm-nano module.
 #
 # Auteur: Atim
 # Created: 03.07.2014
 #
 # Utilisation:
-# 	- make doc 		-> for generate the documentation (in doc).
-# 	- make example 	-> for generate the executing file for the rpi. You
-# 					can use TOOLCHAIN variable for choose the folder
+# 	- make doc 		-> to generate the documentation (in doc).
+# 	- make example 	-> to generate the executing file to the rpi. You
+# 					can use TOOLCHAIN variable to choose the folder
 #					direction of the toolchain.
 #					(eg: make example TOOLCHAIN=/usr/arm).
-# 	- make install 	-> for install example on your rpi in "/usr/bin", if
+# 	- make install 	-> to install example on your rpi in "/usr/bin", if
 #					you use the cross compiling. You can use IP variable
-#					for choose the ip of raspberrypi.
+#					to choose the ip of raspberrypi.
 #					(eg: make install IP=192.168.0.10).
 #					direction of the toolchain.
-# 	- make cleandoc	-> for erase the doc.
-# 	- make clean 	-> for erase the compilation files.
+# 	- make cleandoc	-> to erase the doc.
+# 	- make clean 	-> to erase the compilation files.
 #
 ########################################################################
 
