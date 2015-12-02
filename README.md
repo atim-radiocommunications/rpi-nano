@@ -19,3 +19,6 @@ The documentation is generated  locally in the doc/html/index.html folder.
 
 To report your problem, open an issue.
 
+## Note
+
+This API is old, prefer to use the armapi API.
